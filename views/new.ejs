@@ -1,0 +1,46 @@
+<% include partials/header %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">YelpCamp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Yelp Campground Project</h1>
+        <p class="lead">Add a new Campground</p>
+    </div>
+</div>
+<div class="container">
+    <form action="/campgrounds" method="POST">
+        <div class="form-group">
+            <input type="text" placeholder="Name" name="campname" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">Name of your Camp</small>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Image URL" name="imageurl" class="form-control">
+            <small id="emailHelp" class="form-text text-muted">Link to the image of the camp</small>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+
+    </form>
+</div>
+
+
+<% include partials/footer %>

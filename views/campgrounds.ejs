@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Yelp Campground Project</h1>
+        <p class="lead">List of Available campgrounds.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <% campgrounds.forEach(camp => { %>
+        <div class="col-sm-6">
+            <div class="image-thumbs" style="background-image:url(<%= camp.image %>)"></div>
+            <h4>
+                <%= camp.name %>
+            </h4>
+
+        </div>
+        <%  }); %>
+
+    </div>
+</div>
+
+<% include partials/footer %>
